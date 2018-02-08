@@ -107,11 +107,12 @@ namespace PersonalityTest
             {
                 btBack.Visible = true;
                 Form1.QuestionsList = new QuestionsList();
-                Form1.TacticsXValue = 50;
-                Form1.EnergyXValue = 50;
-                Form1.IdentityXValue = 50;
-                Form1.MindXValue = 50;
-                Form1.NatureXValue = 50;
+
+                Form1.ChartOfTacticsConclusion.CurrentXValue =50;
+                Form1.ChartOfEnergyConclusion.CurrentXValue=50;
+                Form1.ChartOfIdentityConclusion.CurrentXValue =50;
+                Form1.ChartOfMindConclusion.CurrentXValue =50;
+                Form1.ChartOfNatureConclusion.CurrentXValue =50;
                 i = -1;
                 NextQuestion();
             }
@@ -133,20 +134,20 @@ namespace PersonalityTest
         public event EventHandler XValuesChanged;
         private void AddWeights(Answer answer)
         {
-            Form1.TacticsXValue += answer.TacticsWeight;
-            Form1.EnergyXValue += answer.EnergyWeight;
-            Form1.IdentityXValue += answer.IdentityWeight;
-            Form1.MindXValue += answer.MindWeight;
-            Form1.NatureXValue += answer.NatureWeight;
+            Form1.ChartOfTacticsConclusion.CurrentXValue += answer.TacticsWeight;
+            Form1.ChartOfEnergyConclusion.CurrentXValue += answer.EnergyWeight;
+            Form1.ChartOfIdentityConclusion.CurrentXValue += answer.IdentityWeight;
+            Form1.ChartOfMindConclusion.CurrentXValue += answer.MindWeight;
+            Form1.ChartOfNatureConclusion.CurrentXValue += answer.NatureWeight;
             OnXValuesChanged();
         }
         private void SubstractWeights(Answer answer)
         {
-            Form1.TacticsXValue -= answer.TacticsWeight;
-            Form1.EnergyXValue -= answer.EnergyWeight;
-            Form1.IdentityXValue -= answer.IdentityWeight;
-            Form1.MindXValue -= answer.MindWeight;
-            Form1.NatureXValue -= answer.NatureWeight;
+            Form1.ChartOfTacticsConclusion.CurrentXValue -= answer.TacticsWeight;
+            Form1.ChartOfEnergyConclusion.CurrentXValue -= answer.EnergyWeight;
+            Form1.ChartOfIdentityConclusion.CurrentXValue -= answer.IdentityWeight;
+            Form1.ChartOfMindConclusion.CurrentXValue -= answer.MindWeight;
+            Form1.ChartOfNatureConclusion.CurrentXValue -= answer.NatureWeight;
             OnXValuesChanged();
         }
 

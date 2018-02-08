@@ -42,8 +42,8 @@ namespace PersonalityTest
                 BorderWidth = 2,
             };
             chart.Series.Add(Mind);
-            Mind.Points.AddXY("Introwertyk", Math.Round(Form1.MindCoG));
-            Mind.Points.AddXY("Ekstrawertyk", Math.Round(100 - Form1.MindCoG));
+            Mind.Points.AddXY("Introwertyk", Math.Round(Form1.ChartOfMindConclusion.CoG));
+            Mind.Points.AddXY("Ekstrawertyk", Math.Round(100 - Form1.ChartOfMindConclusion.CoG));
 
             var Energy = new Series()
             {
@@ -56,8 +56,8 @@ namespace PersonalityTest
                 BorderWidth = 10
             };
             chart.Series.Add(Energy);
-            Energy.Points.AddXY("Realistyczny", Math.Round(Form1.EnergyCoG));
-            Energy.Points.AddXY("Intuicyjny", Math.Round(100 - Form1.EnergyCoG));
+            Energy.Points.AddXY("Realistyczny", Math.Round(Form1.ChartOfEnergyConclusion.CoG));
+            Energy.Points.AddXY("Intuicyjny", Math.Round(100 - Form1.ChartOfEnergyConclusion.CoG));
 
             var Nature = new Series()
             {
@@ -70,8 +70,8 @@ namespace PersonalityTest
                 BorderWidth = 2
             };
             chart.Series.Add(Nature);
-            Nature.Points.AddXY("Zasady", Math.Round(Form1.NatureCoG));
-            Nature.Points.AddXY("Logika", Math.Round(100 - Form1.NatureCoG));
+            Nature.Points.AddXY("Zasady", Math.Round(Form1.ChartOfNatureConclusion.CoG));
+            Nature.Points.AddXY("Logika", Math.Round(100 - Form1.ChartOfNatureConclusion.CoG));
 
             var Tactics = new Series()
             {
@@ -84,8 +84,8 @@ namespace PersonalityTest
                 BorderWidth = 2
             };
             chart.Series.Add(Tactics);
-            Tactics.Points.AddXY("Spontaniczny", Math.Round(Form1.TacticsCoG));
-            Tactics.Points.AddXY("Planujący", Math.Round(100 - Form1.TacticsCoG));
+            Tactics.Points.AddXY("Spontaniczny", Math.Round(Form1.ChartOfTacticsConclusion.CoG));
+            Tactics.Points.AddXY("Planujący", Math.Round(100 - Form1.ChartOfTacticsConclusion.CoG));
 
             var Indentity = new Series()
             {
@@ -98,8 +98,8 @@ namespace PersonalityTest
                 BorderWidth = 2
             };
             chart.Series.Add(Indentity);
-            Indentity.Points.AddXY("Czujny", Math.Round(Form1.IdentityCoG));
-            Indentity.Points.AddXY("Asertywny", Math.Round(100 - Form1.IdentityCoG));
+            Indentity.Points.AddXY("Czujny", Math.Round(Form1.ChartOfIdentityConclusion.CoG));
+            Indentity.Points.AddXY("Asertywny", Math.Round(100 - Form1.ChartOfIdentityConclusion.CoG));
             chart.AlignDataPointsByAxisLabel();
         }
 
